@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cali: La Sucursal Natural - Novela Visual</title>
+    <style>
+        :root {
+            --bg-book: #fdfbf7;
+            --leather: #2c1d11;
+            --accent: #2e7d32;
+            --accent-hover: #1b5e20;
+            --text-dark: #333333;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1b3b2b 0%, #0d1f14 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .book-container {
+            width: 90vw;
+            max-width: 1100px;
+            height: 75vh;
+            background: var(--bg-book);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6), inset 0 0 40px rgba(0,0,0,0.1);
+            display: flex;
+            position: relative;
+            border: 8px solid var(--leather);
+        }
+        /* Separador central del libro */
+        .book-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+        .page {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .page-left {
+            border-right: 1px solid #ddd;
+            align-items: center;
+            text-align: center;
+            background: #fffdf9;
+        }
+        .page-right {
+            background: var(--bg-book);
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .img-placeholder {
+            width: 100%;
+            max-height: 250px;
+            background: #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 2px dashed #ccc;
+        }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.1s;
+        }
+        button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .audio-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #e8f5e9;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #c8e6c9;
+            width: fit-content;
+        }
+        .audio-bar button {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+        }
+        .nav-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book-container">
+        <!-- PÁGINA IZQUIERDA: Imagen y Personaje -->
+        <div class="page page-left">
+            <div>
+                <h1>Cali: La Sucursal Natural</h1>
+                <p><em>"El lugar donde toda la vida es posible."</em></p>
+            </div>
+            <div class="img-placeholder" id="visual-frame">
+                [Imagen Representativa / Personaje]
+            </div>
+            <div>
+                <p style="font-size: 0.9rem; color: #555;">Universidad Autónoma de Occidente - Multimedia</p>
+            </div>
+        </div>
+
+        <!-- PÁGINA DERECHA: Texto, Audio y Acciones -->
+        <div class="page page-right">
+            <div>
+                <div class="audio-bar">
+                    <span>🔊 Narración de audio:</span>
+                    <button onclick="toggleAudio()">Reproducir</button>
+                </div>
+                
+                <div id="story-content">
+                    <h2>Bienvenido</h2>
+                    <p>Has ingresado al prototipo de novela visual interactiva sobre los ecosistemas, fauna, flora y ríos de Santiago de Cali. Selecciona una experiencia para comenzar tu recorrido por la biodiversidad local.</p>
+                </div>
+            </div>
+
+            <div id="action-area">
+                <div class="btn-group">
+                    <button onclick="changePage('relato')">📖 Modo Relato</button>
+                    <button onclick="changePage('interaccion')">🎮 Modo Interacción</button>
+                </div>
+            </div>
+
+            <div class="nav-footer">
+                <span id="page-indicator">Página 1 / 2</span>
+                <span>Capítulo Introductorio</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAudio() {
+            alert("Reproduciendo audio descriptivo de la escena...");
+        }
+
+        function changePage(mode) {
+            const content = document.getElementById('story-content');
+            const actions = document.getElementById('action-area');
+            const visual = document.getElementById('visual-frame');
+            const indicator = document.getElementById('page-indicator');
+
+            if(mode === 'relato') {
+                visual.style.background = "#c8e6c9";
+                visual.innerHTML = "[Ilustración: Farallones y Guías]";
+                content.innerHTML = `
+                    <h2>Modo Relato</h2>
+                    <p><strong>Narrador:</strong> ¡Bienvenidos a Cali! Con más de 2.2 millones de habitantes y una riqueza natural inigualable. Hoy conocemos a Catleya, Cali y Pancito, quienes nos guiarán por los 9 tesoros ecológicos de nuestra ciudad (Ríos Pance, Bellavista, Pichindé, Jardín Botánico, Girasoles, Zoológico y más).</p>
+                `;
+                actions.innerHTML = `
+                    <div class="btn-group">
+                        <button onclick="location.reload()">⬅️ Volver al Inicio</button>
+                        <button onclick="alert('¡Recorrido de zonas finalizado con éxito!')">✔️ Terminar Relato</button>
+                    </div>
+                `;
+                indicator.innerText = "Página 2 / 5 (Relato)";
+            } else if(mode === 'interaccion') {
+                visual.style.background = "#b3e5fc";
+                visual.innerHTML = "[Ilustración: Cali en Crisis Ambiental]";
+                content.innerHTML = `
+                    <h2>Modo Interacción</h2>
+                    <p>Los ecosistemas de Cali están en peligro. Selecciona qué historia deseas salvar primero:</p>
+                `;
+                actions.innerHTML = `
+                    <div class="btn-group" style="flex-direction: column; gap: 8px;">
+                        <button onclick="alert('Iniciando: El Llanto del Agua (Ríos)')">🌊 1. El Llanto del Agua</button>
+                        <button onclick="alert('Iniciando: El Silencio del Bosque (Flora)')">🌸 2. El Silencio del Bosque</button>
+                        <button onclick="alert('Iniciando: El Vuelo Apagado (Fauna)')">🦜 3. El Vuelo Apagado</button>
+                        <button onclick="location.reload()" style="background:#757575; margin-top:10px;">⬅️ Volver al Menú</button>
+                    </div>
+                `;
+                indicator.innerText = "Página 2 / 5 (Interactivo)";
+            }
+        }
+    </script>
+</body>
+</html>
