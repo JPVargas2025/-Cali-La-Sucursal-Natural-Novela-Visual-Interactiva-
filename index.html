@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Cali: La Sucursal Natural - Novela Visual</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -13,30 +13,40 @@
             --leather: #2c1d11;
             --accent: #2e7d32;
             --accent-hover: #1b5e20;
-            --text-dark: #333333;
+            --text-dark: #233d26;
         }
+        
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1b3b2b 0%, #0d1f14 100%);
             height: 100vh;
+            width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
         }
+
         .book-container {
-            width: 90vw;
-            max-width: 1150px;
-            height: 80vh;
+            width: 94vw;
+            max-width: 1200px;
+            height: 88vh;
             background: var(--bg-book);
             border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6), inset 0 0 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
             display: flex;
             position: relative;
-            border: 8px solid var(--leather);
+            border: 6px solid var(--leather);
+            overflow: hidden;
         }
+
         .book-container::before {
             content: '';
             position: absolute;
@@ -47,80 +57,178 @@
             background: rgba(0,0,0,0.15);
             z-index: 10;
         }
+
         .page {
             flex: 1;
-            padding: 30px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            box-sizing: border-box;
-            overflow-y: auto;
+            overflow: hidden;
             position: relative;
         }
+
         .page-left {
             border-right: 1px solid #ddd;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             background: #fffdf9;
         }
+
         .page-right {
             background: var(--bg-book);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        h1 { color: var(--accent); font-size: 1.6rem; margin-bottom: 5px; }
-        h2 { color: var(--accent); font-size: 1.2rem; margin-top: 5px; }
-        p { color: var(--text-dark); font-size: 0.95rem; line-height: 1.5; }
-        .img-placeholder {
+
+        .img-frame {
             width: 100%;
-            height: 280px;
-            background: #e0e0e0;
+            height: 100%;
+            background: #f0f0f0;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #666;
-            font-weight: bold;
-            margin-bottom: 15px;
-            border: 2px dashed #ccc;
+            border: 2px solid #c8e6c9;
             overflow: hidden;
-            position: relative;
         }
+
+        .img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contenedor dinámico central */
+        #story-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        /* La caja verde ahora ocupa TODO el espacio disponible hasta los botones */
+        .highlight-text-box {
+            background: #e8f5e9;
+            border: 2px solid #a5d6a7;
+            border-radius: 12px;
+            padding: clamp(15px, 3vh, 30px);
+            width: 100%;
+            flex: 1;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .highlight-text-box p {
+            color: var(--text-dark);
+            font-size: clamp(1rem, 2.2vh, 1.25rem);
+            line-height: 1.6;
+            font-weight: 500;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Grupo de botones simétricos */
         .btn-group {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             justify-content: center;
-            margin-top: 15px;
+            align-items: center;
             flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 5px;
         }
+
         button {
             background-color: var(--accent);
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            border-radius: 6px;
+            padding: 12px 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s, transform 0.1s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
         }
-        button:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+
+        button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .trivia-btn {
+            background-color: #455a64;
+            width: 100%;
+            text-align: left;
+            padding: 12px 18px;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
         .audio-bar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: #e8f5e9;
-            padding: 6px 12px;
+            padding: 4px 12px;
             border-radius: 20px;
-            margin-bottom: 10px;
+            margin: 0 auto;
             border: 1px solid #c8e6c9;
+            width: fit-content;
+            min-width: 180px;
         }
+
         .nav-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.85rem;
-            color: #666;
             border-top: 1px solid #ddd;
-            padding-top: 10px;
+            padding-top: 8px;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .footer-center {
+            font-size: 0.8rem;
+            color: #555;
+            margin: 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .footer-right {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #2e7d32;
+            position: absolute;
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .book-container {
+                flex-direction: column;
+                height: 96vh;
+                width: 96vw;
+            }
+            .page-left { height: 38%; border-right: none; border-bottom: 1px solid #ddd; }
+            .page-right { height: 62%; }
         }
     </style>
 </head>
@@ -129,28 +237,24 @@
     <div class="book-container">
         <!-- PÁGINA IZQUIERDA -->
         <div class="page page-left">
-            <div>
-                <img src="img/logo.png" alt="Logo UAO" style="height: 40px; object-fit: contain; margin-bottom: 5px;" onerror="this.style.display='none'">
-                <p style="font-size: 0.8rem; color: #555; margin:0;">Universidad Autónoma de Occidente</p>
-            </div>
-            <div class="img-placeholder" id="visual-frame">
-                [Cargando Escena Visual...]
-            </div>
-            <div>
-                <p style="font-size: 0.75rem; color: #777;">Novela Visual Interactiva - Cali, La Sucursal Natural</p>
+            <div class="img-frame" id="visual-frame">
+                [Cargando Imagen...]
             </div>
         </div>
 
         <!-- PÁGINA DERECHA -->
         <div class="page page-right">
             <div>
-                <div class="audio-bar">
-                    <span style="font-size: 0.8rem; font-weight: bold; color: #1b5e20;">🎵 Control Ambiental</span>
-                    <button id="btn-audio-env" onclick="toggleAudioAmbiente()" style="padding: 4px 10px; font-size: 0.75rem;">🔊 Audio Ambiente: OFF</button>
+                <div class="audio-bar" id="audio-bar-container" style="display: none;">
+                    <span id="audio-bar-label" style="font-size: 0.75rem; font-weight: bold; color: #1b5e20;">🎵 Ambiente</span>
+                    <button id="btn-audio-toggle" onclick="toggleControlAudio()" style="padding: 3px 10px; font-size: 0.7rem; border-radius: 12px;">🔊 ON</button>
                 </div>
-                
-                <div id="story-content">
-                    <!-- Contenido inyectado desde sketch.js -->
+            </div>
+
+            <!-- Contenedor central que se expande rellenando todo el espacio -->
+            <div id="story-container">
+                <div id="story-content" style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+                    <!-- Contenido inyectado dinámicamente -->
                 </div>
             </div>
 
@@ -160,14 +264,13 @@
                 </div>
 
                 <div class="nav-footer">
-                    <span id="page-indicator">Cargando...</span>
-                    <span id="chapter-title">Cali: La Sucursal Natural</span>
+                    <div class="footer-center" id="section-name"></div>
+                    <div class="footer-right" id="page-indicator"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Librerías y Sketch principal -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
     <script src="sketch.js"></script>
