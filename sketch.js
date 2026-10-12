@@ -1,6 +1,5 @@
-// ==========================================
-// 1. BASE DE DATOS Y GUIONES LITERALEA
-// ==========================================
+/* eslint-disable no-undef, no-unused-vars */
+
 const gameData = {
     bienvenida: [
         {
@@ -58,7 +57,7 @@ const gameData = {
         { id: "img_h18", title: "1. Zoológico de Cali (Ecosistema)", text: "Es Considerado uno de los mejores de Latinoamérica, alberga más de 2.500 animales de 200 especies en ambientes simulados que replican los bosques secos y húmedos del occidente colombiano.", audio: "aud/aud_h18.mp3", image: "img/img_h18.jpg" },
         { id: "img_h19", title: "2. Parque de las Garzas", text: "El Parque de las Garzas es un refugio de aves acuáticas al sur de la ciudad. ¿Qué encuentras? avistamiento masivo de garzas al atardecer. ¡Cuidado! Mantén una distancia prudente para no alterarlas.", audio: "aud/aud_h19.mp3", image: "img/img_h19.jpg" },
         { id: "img_h20", title: "2. Parque de las Garzas (Humedal)", text: "Es Humedal urbano con un área protegida de 3.5 hectáreas que sirve como dormitorio y zona de cría para miles de garzas blancas, bueyeras y aves migratorias del sur del continente.", audio: "aud/aud_h20.mp3", image: "img/img_h20.jpg" },
-        { id: "img_h21", title: "3. Granja Interactiva Ambiental", text: "La Granja interactiva local son espacios de conexión rural.¿Qué encuentras? Animales de granja y pedagogía agroecológica. ¡Cuidado! Trata con respeto y empatía a los animales.", audio: "aud/aud_h21.mp3", image: "img/img_h21.jpg" },
+        { id: "img_h21", title: "3. Granja Interactiva Ambiental", text: "La Granja interactiva local son espacios de conexión rural. ¿Qué encuentras? Animales de granja y pedagogía agroecológica. ¡Cuidado! Trata con respeto y empatía a los animales.", audio: "aud/aud_h21.mp3", image: "img/img_h21.jpg" },
         { id: "img_h22", title: "3. Granja Interactiva (Espacio)", text: "Es un espacio de interacción pedagógica donde se rescata la fauna doméstica y silvestre rehabilitada, fomentando la convivencia armónica entre humanos y animales de granja bajo principios de bienestar animal.", audio: "aud/aud_h22.mp3", image: "img/img_h22.jpg" },
         { id: "img_h23", title: "Cierre del Relato", text: "¡Excelente! Ahora ya conoces cómo estos lugares aportan al equilibrio ecológico de Cali. ¿Estás listo para visitar la ciudad y ser parte activa de su conservación? ¡Tu aventura comienza ahora!", audio: "aud/aud_h23.mp3", image: "img/img_h23.jpg" }
     ],
@@ -80,7 +79,7 @@ const gameData = {
                 titulo: "Historia 1: El Llanto del Agua (Ríos de Cali)",
                 escenas: [
                     { id: "img_r1", text: "\"¡Hola! Soy Pancito, el espíritu de los ríos que nacen en los majestuosos Farallones de Cali. Me encargo de mantener fresca la ciudad y dar de beber a miles de seres vivos. Hoy seré tu guía en esta aventura hídrica.\"", audio: "aud/aud_r1.mp3" },
-                    { id: "img_r2", text: "\"Cali es privileged. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "aud/aud_r2.mp3" },
+                    { id: "img_r2", text: "\"Cali es privilegiada. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "aud/aud_r2.mp3" },
                     { id: "img_r3", text: "\"Nuestros ríos nacen a más de 3.000 metros de altura. En sus riberas puedes hacer caminatas ecológicas, contemplar cascadas y sentir la fuerza del agua pura que oxigena todo nuestro valle.\"", audio: "aud/aud_r3.mp3" },
                     { id: "img_r4", text: "\"¡Pero algo anda muy mal! Toneladas de plástico se acumulan en mis orillas, la tala desmedida seca los nacimientos y la contaminación nos está ahogando.\"", audio: "aud/aud_r4.mp3" }
                 ],
@@ -123,7 +122,7 @@ const gameData = {
                 trivia: [
                     { pregunta: "¿Qué acción ayuda directamente a proteger los bosques urbanos de Cali?", opciones: ["A) Plantar árboles nativos y no talar", "B) Cortar arbustos para hacer espacio", "C) Quemar hojas secas."], correcta: 0 },
                     { pregunta: "¿Por qué son importantes las orquídeas y plantas nativas en el ecosistema?", opciones: ["A) Atraen plagas", "B) Albergan polinizadores esenciales y regulan la humedad", "C) No tienen función."], correcta: 1 },
-                    { pregunta: "Si visitas el Jardín Botánico, ¿qué regla debes seguir strictly?", opciones: ["A) Arrancar flores de recuerdo", "B) Seguir los senderos y no dañar la vegetación", "C) Dejar basura."], correcta: 1 }
+                    { pregunta: "Si visitas el Jardín Botánico, ¿qué regla debes seguir estrictamente?", opciones: ["A) Arrancar flores de recuerdo", "B) Seguir los senderos y no dañar la vegetación", "C) Dejar basura."], correcta: 1 }
                 ]
             },
             fauna: {
@@ -148,16 +147,13 @@ const gameData = {
                 trivia: [
                     { pregunta: "¿Qué debes hacer si ves un ave silvestre herida en la ciudad?", opciones: ["A) Encerrarla en una jaula pequeña", "B) Reportarla al Dagma o autoridades ambientales", "C) Ignorarla."], correcta: 1 },
                     { pregunta: "¿Por qué es ilegal y dañino comprar animales silvestres como mascotas?", opciones: ["A) Porque cantan mucho", "B) Porque se rompe su rol ecológico y sufren maltrato en cautiverio", "C) Porque cuestan mucho."], correcta: 1 },
-                    { pregunta: "¿Qué lugar en Cali es emblemático para la conservación y educación sobre fauna?", opciones: ["A) El Zoológico de Cali", "B) Un centro comercial", "C) Una calle pavimentada."], correcta: 0 }
+                    { pregunta: "¿Qué lugar en Cali es emblemático para la conservación y educación sobre fauna?", opciones: ["A) El Zoológico de Cali", "B) Un comercial", "C) Una calle pavimentada."], correcta: 0 }
                 ]
             }
         }
     }
 };
 
-// ==========================================
-// 2. LÓGICA DE NAVEGACIÓN Y CANVAS (SKETCH)
-// ==========================================
 let currentMode = 'bienvenida';
 let introIndex = 0;
 let relatoIndex = 0;
@@ -173,34 +169,8 @@ let audioNarracion = null;
 let ambienteActivo = false;
 
 window.onload = function() {
-    setupCanvas();
     mostrarPantallaBienvenida();
 };
-
-function setupCanvas() {
-    const canvas = document.getElementById('book-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    canvas.width = canvas.parentElement.clientWidth;
-    canvas.height = canvas.parentElement.clientHeight;
-    ctx.fillStyle = "#f4f0ea";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
-
-function triggerCanvasAnimation() {
-    const canvas = document.getElementById('book-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let alpha = 1.0;
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = `rgba(46, 125, 50, ${alpha})`;
-        ctx.fillRect(0, 0, canvas.width * (1 - alpha), canvas.height);
-        alpha -= 0.15;
-        if (alpha > 0) requestAnimationFrame(animate);
-    }
-    animate();
-}
 
 function toggleAudioAmbiente() {
     ambienteActivo = !ambienteActivo;
@@ -219,7 +189,6 @@ function reproducirAudio(url) {
     audioNarracion.play().catch(e => console.log("Audio no encontrado:", url));
 }
 
-// --- PANTALLA BIENVENIDA ---
 function mostrarPantallaBienvenida() {
     currentMode = 'bienvenida';
     introIndex = 0;
@@ -227,7 +196,6 @@ function mostrarPantallaBienvenida() {
 }
 
 function cargarEscenaBienvenida() {
-    triggerCanvasAnimation();
     const item = gameData.bienvenida[introIndex];
     document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="${item.title}" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">`;
     document.getElementById('story-content').innerHTML = `
@@ -249,10 +217,8 @@ function cargarEscenaBienvenida() {
     document.getElementById('chapter-title').innerText = "Introducción Cinematográfica";
 }
 
-// --- PANTALLA INICIO ---
 function mostrarPantallaInicio() {
     currentMode = 'inicio';
-    triggerCanvasAnimation();
     const inicio = gameData.pantallaInicio;
 
     document.getElementById('visual-frame').innerHTML = `
@@ -270,7 +236,7 @@ function mostrarPantallaInicio() {
         <div class="btn-group" style="flex-direction: column;">
             <button onclick="iniciarModoRelato(0)">📖 Modo Relato</button>
             <button onclick="iniciarModoInteraccionIntro(0)">🎮 Modo Interactivo</button>
-            <a href="assets/Cali_La_Sucursal_Natural_Guia_del_Viajero.pdf" download style="text-decoration: none;">
+            <a href="assets/docs/Cali_La_Sucursal_Natural_Guia_del_Viajero.pdf" download style="text-decoration: none;">
                 <button style="width: 100%; background: #b26a00;">📥 Descargar Guía Turística (PDF)</button>
             </a>
         </div>
@@ -279,11 +245,9 @@ function mostrarPantallaInicio() {
     document.getElementById('chapter-title').innerText = "Menú Principal";
 }
 
-// --- MODO RELATO ---
 function iniciarModoRelato(idx) {
     currentMode = 'relato';
     relatoIndex = idx;
-    triggerCanvasAnimation();
     const item = gameData.modoRelato[relatoIndex];
 
     document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="${item.title}" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">`;
@@ -303,11 +267,9 @@ function iniciarModoRelato(idx) {
     document.getElementById('chapter-title').innerText = "Modo Relato Lineal";
 }
 
-// --- MODO INTERACCIÓN ---
 function iniciarModoInteraccionIntro(idx) {
     currentMode = 'interaccion-intro';
     interIntroIndex = idx;
-    triggerCanvasAnimation();
     const item = gameData.modoInteraccion.intro[interIntroIndex];
 
     document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="Escena Interacción" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">`;
@@ -329,7 +291,6 @@ function iniciarModoInteraccionIntro(idx) {
 
 function mostrarMenuSeleccionHistorias() {
     currentMode = 'menu-historias';
-    triggerCanvasAnimation();
     const sel = gameData.modoInteraccion.seleccionHistoria;
 
     document.getElementById('visual-frame').innerHTML = `<img src="${sel.image}" alt="Selección" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">`;
@@ -359,7 +320,6 @@ function cargarHistoriaInteractiva(tipo) {
 }
 
 function mostrarPasoHistoriaInteractiva() {
-    triggerCanvasAnimation();
     const histData = gameData.modoInteraccion.historias[historiaActual];
 
     if (historiaIndex < histData.escenas.length) {
@@ -383,7 +343,6 @@ function mostrarPasoHistoriaInteractiva() {
 }
 
 function mostrarPantallaEncrucijadaHistoria() {
-    triggerCanvasAnimation();
     const histData = gameData.modoInteraccion.historias[historiaActual];
     const enc = histData.encrucijada;
 
@@ -410,7 +369,6 @@ function iniciarTriviaInteractiva() {
 }
 
 function cargarSiguientePreguntaTrivia() {
-    triggerCanvasAnimation();
     const triviaList = gameData.modoInteraccion.historias[historiaActual].trivia;
 
     if (triviaIdx < triviaList.length) {
@@ -444,7 +402,6 @@ function responderTrivia(opcion) {
 }
 
 function mostrarFinalFeliz(idx) {
-    triggerCanvasAnimation();
     const histData = gameData.modoInteraccion.historias[historiaActual];
     const felizArr = histData.feliz;
 
@@ -467,7 +424,6 @@ function mostrarFinalFeliz(idx) {
 }
 
 function mostrarFinalTriste(idx) {
-    triggerCanvasAnimation();
     const histData = gameData.modoInteraccion.historias[historiaActual];
     const tristeArr = histData.triste;
 

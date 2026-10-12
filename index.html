@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <title>Cali: La Sucursal Natural - Novela Visual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <style>
         :root {
             --bg-book: #fdfbf7;
@@ -82,15 +85,6 @@
             overflow: hidden;
             position: relative;
         }
-        #book-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 5;
-        }
         .btn-group {
             display: flex;
             gap: 10px;
@@ -133,9 +127,6 @@
 <body>
 
     <div class="book-container">
-        <!-- Canvas / Sketch para animaciones -->
-        <canvas id="book-canvas"></canvas>
-
         <!-- PÁGINA IZQUIERDA -->
         <div class="page page-left">
             <div>
@@ -159,13 +150,13 @@
                 </div>
                 
                 <div id="story-content">
-                    <!-- Contenido dinámico inyectado desde sketch.js -->
+                    <!-- Contenido inyectado desde sketch.js -->
                 </div>
             </div>
 
             <div>
                 <div id="action-area">
-                    <!-- Botones de acción dinámicos -->
+                    <!-- Botones dinámicos -->
                 </div>
 
                 <div class="nav-footer">
@@ -176,7 +167,9 @@
         </div>
     </div>
 
-    <!-- Cargar directamente el archivo sketch.js que pide el profesor -->
+    <!-- Librerías y Sketch principal -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
     <script src="sketch.js"></script>
 </body>
 </html>
