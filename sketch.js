@@ -24,7 +24,7 @@ const gameData = {
     pantallaInicio: {
         textoPantalla: "Bienvenido a Cali, la Sucursal Natural",
         eslogan: "El lugar donde toda la vida es posible.",
-        audio: "aud/aud_z1.mp3",
+        audio: "assets/aud/intro/aud_z1.mp3",
         image: "img/logo.png"
     },
     modoRelato: [
@@ -62,7 +62,7 @@ const gameData = {
             id: "img_x2",
             encabezado: "\"Cali es un territorio de biodiversidad milagrosa, pero hoy nuestros ecosistemas enfrentan una encrucijada crítica. Depende de ti mantenerlos con vida o dejar que colapsen. ¿Estás listo para asumir el desafío y convertirte en el guardián de nuestra naturaleza?\"",
             instruccion: "\"Elige la historia que desees realizar y salva un ecosistema:\"",
-            audio: "aud/aud_z2.mp3",
+            audio: "assets/aud/interaccion/aud_z2.mp3",
             image: "img/img_x2.jpg"
         },
         historias: {
@@ -74,7 +74,7 @@ const gameData = {
                     { id: "img_r3", text: "\"Nuestros ríos nacen a más de 3.000 metros de altura. En sus riberas puedes hacer caminatas ecológicas, contemplar cascadas y sentir la fuerza del agua pura que oxigena todo nuestro valle.\"", audio: "assets/aud/interaccion/aud_r3.mp3" },
                     { id: "img_r4", text: "\"¡Pero algo anda muy mal! Toneladas de plástico se acumulan en mis orillas, la tala desmedida seca los nacimientos y la contaminación nos está ahogando.\"", audio: "assets/aud/interaccion/aud_r4.mp3" }
                 ],
-                encrucijada: { id: "img_x3", texto: "\"Estamos a punto de perder nuestras fuentes de agua para siempre. Necesitamos a un verdadero héroe que tome las decisiones correctas. ¿Aceptas la misión de salvar los ríos de Cali?\"", audio: "aud/aud_z3.mp3", opcionA: "A) ¡Sí, quiero salvar los ríos!", opcionB: "B) No me importa, continuar la rutina" },
+                encrucijada: { id: "img_x3", texto: "\"Estamos a punto de perder nuestras fuentes de agua para siempre. Necesitamos a un verdadero héroe que tome las decisiones correctas. ¿Aceptas la misión de salvar los ríos de Cali?\"", audio: "assets/aud/interaccion/aud_z3.mp3", opcionA: "A) ¡Sí, quiero salvar los ríos!", opcionB: "B) No me importa, continuar la rutina" },
                 feliz: [
                     { id: "img_r5", text: "\"¡Sabía que podía contar contigo! Veo a personas concientizadas recogiendo residuos y cuidando las cuencas altas. ¡Aún podemos lograrlo!\"", audio: "assets/aud/interaccion/aud_r5.mp3" },
                     { id: "img_r6", text: "\"¡Mira cómo cambia todo! Al ahorrar agua en casa y proteger los árboles ribereños, el cauce vuelve a tomar fuerza.\"", audio: "assets/aud/interaccion/aud_r6.mp3" },
@@ -99,7 +99,7 @@ const gameData = {
                     { id: "img_f3", text: "\"Aquí habitan más de 500 especies de plantas tropicales y guaduas ancestrales que capturan el carbono y regulan la temperatura de nuestra hermosa ciudad.\"", audio: "assets/aud/interaccion/aud_f3.mp3" },
                     { id: "img_f4", text: "\"¡Pero la sombra de la destrucción nos acecha! La tala ilegal para madera y los incendios provocados en los cerros están arrasando con nuestros bosques nativos.\"", audio: "assets/aud/interaccion/aud_f4.mp3" }
                 ],
-                encrucijada: { id: "img_x4", texto: "\"Sin vegetación, Cali se convertirá en un desierto gris y sin aire puro. ¿Nos ayudarás a reforestar y proteger la flora de nuestra tierra?\"", audio: "aud/aud_z4.mp3", opcionA: "A) ¡Sí, quiero proteger el bosque!", opcionB: "B) No me interesa" },
+                encrucijada: { id: "img_x4", texto: "\"Sin vegetación, Cali se convertirá en un desierto gris y sin aire puro. ¿Nos ayudarás a reforestar y proteger la flora de nuestra tierra?\"", audio: "assets/aud/interaccion/aud_z4.mp3", opcionA: "A) ¡Sí, quiero proteger el bosque!", opcionB: "B) No me interesa" },
                 feliz: [
                     { id: "img_f5", text: "\"¡Tu apoyo me llena de vida! La comunidad se ha unido para plantar guayacanes y orquídeas nativas en las zonas afectadas.\"", audio: "assets/aud/interaccion/aud_f5.mp3" },
                     { id: "img_f6", text: "\"¡El aire vuelve a ser fresco! Al respetar los senderos y evitar las quemas, el pulmón verde de Cali respira de nuevo.\"", audio: "assets/aud/interaccion/aud_f6.mp3" },
@@ -124,7 +124,7 @@ const gameData = {
                     { id: "img_a3", text: "\"Más de 500 especies de aves cruzan nuestros cielos cada día. Somos una de las ciudades con mayor diversidad avifaunística de todo el planeta.\"", audio: "assets/aud/interaccion/aud_a3.mp3" },
                     { id: "img_a4", text: "\"¡Pero nuestras alas se apagan! El tráfico ilegal de animales silvestres, las jaulas y la destrucción de nuestros nidos nos están dejando sin hogar.\"", audio: "assets/aud/interaccion/aud_a4.mp3" }
                 ],
-                encrucijada: { id: "img_x5", texto: "\"Si los animales silvestres desaparecen, el ecosistema colapsará. ¿Nos ayudarás a defender la fauna de Cali?\"", audio: "aud/aud_z5.mp3", opcionA: "A) ¡Sí, quiero proteger la fauna!", opcionB: "B) No me importa" },
+                encrucijada: { id: "img_x5", texto: "\"Si los animales silvestres desaparecen, el ecosistema colapsará. ¿Nos ayudarás a defender la fauna de Cali?\"", audio: "assets/aud/interaccion/aud_z5.mp3", opcionA: "A) ¡Sí, quiero proteger la fauna!", opcionB: "B) No me importa" },
                 feliz: [
                     { id: "img_a5", text: "\"¡Gracias por alzar tu voz! La gente ha entendido que las aves y animales silvestres deben vivir libres y no en cautiverio.\"", audio: "assets/aud/interaccion/aud_a5.mp3" },
                     { id: "img_a6", text: "\"¡Nuestros nidos vuelven a estar seguros! Al respetar su espacio y denunciar el tráfico ilegal, la naturaleza recupera su equilibrio.\"", audio: "assets/aud/interaccion/aud_a6.mp3" },
