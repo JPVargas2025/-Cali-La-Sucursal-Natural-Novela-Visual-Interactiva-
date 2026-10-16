@@ -69,7 +69,7 @@ const gameData = {
             rios: {
                 titulo: "Historia 1: El Llanto del Agua",
                 escenas: [
-                    { id: "img_r1", text: "\"¡Hola! Soy Pancito, el espíritu de los ríos que nacen en los majestuosos Farallones de Cali. Me encargo de mantener fresca la ciudad y dar de beber a miles de seres vivos. Hoy seré tu guía en esta aventura hídrica.\"", audio: "assets/aud/interaccion/aud_r1.mp3", image: "assets/img/img_r1.png"},
+                    { id: "img_r1", text: "\"¡Hola! Soy Pancito, el espíritu de los ríos que nacen en los majestuosos Farallones de Cali. Me encargo de mantener fresca la ciudad y dar de beber a miles de seres vivos. Hoy seré tu guía en esta aventura hídrica.\"", audio: "assets/aud/interaccion/aud_r1.mp3", image: "assets/img/img_r1.png" },
                     { id: "img_r2", text: "\"Cali es privilegiada. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "assets/aud/interaccion/aud_r2.mp3", image: "assets/img/img_r2.png" },
                     { id: "img_r3", text: "\"Nuestros ríos nacen a más de 3.000 metros de altura. En sus riberas puedes hacer caminatas ecológicas, contemplar cascadas y sentir la fuerza del agua pura que oxigena todo nuestro valle.\"", audio: "assets/aud/interaccion/aud_r3.mp3", image: "assets/img/img_r3.png" },
                     { id: "img_r4", text: "\"¡Pero algo anda muy mal! Toneladas de plástico se acumulan en mis orillas, la tala desmedida seca los nacimientos y la contaminación nos está ahogando.\"", audio: "assets/aud/interaccion/aud_r4.mp3", image: "assets/img/img_r4.png" }
@@ -354,7 +354,7 @@ function mostrarPasoHistoriaInteractiva() {
 
     if (historiaIndex < histData.escenas.length) {
         let esc = histData.escenas[historiaIndex];
-        document.getElementById('visual-frame').innerHTML = `<img src="img/${esc.id}.jpg" alt="Escena" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
+        document.getElementById('visual-frame').innerHTML = `<img src="${esc.image}" alt="Escena" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
         document.getElementById('story-content').innerHTML = `
             <div class="highlight-text-box">
                 <p>${esc.text}</p>
@@ -379,7 +379,7 @@ function mostrarPantallaEncrucijadaHistoria() {
     const histData = gameData.modoInteraccion.historias[historiaActual];
     const enc = histData.encrucijada;
 
-    document.getElementById('visual-frame').innerHTML = `<img src="img/${enc.id}.jpg" alt="Encrucijada" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
+    document.getElementById('visual-frame').innerHTML = `<img src="${enc.image}" alt="Encrucijada" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
     document.getElementById('story-content').innerHTML = `
         <div class="highlight-text-box">
             <p>${enc.texto}</p>
@@ -400,16 +400,25 @@ function mostrarPantallaEncrucijadaHistoria() {
 function iniciarTriviaInteractiva() {
     triviaIdx = 0;
     puntaje = 0;
+    if (audioNarracion) {
+        audioNarracion.pause();
+        audioNarracion.currentTime = 0;
+    }
+    
     cargarSiguientePreguntaTrivia();
 }
 
 function cargarSiguientePreguntaTrivia() {
     actualizarBarraAudio('ninguno');
-    const triviaList = gameData.modoInteraccion.historias[historiaActual].trivia;
+    const histData = gameData.modoInteraccion.historias[historiaActual];
+    const triviaList = histData.trivia;
 
     if (triviaIdx < triviaList.length) {
         let q = triviaList[triviaIdx];
-        document.getElementById('visual-frame').innerHTML = `<div style="display:flex; justify-content:center; align-items:center; height:100%; font-weight:bold; color:#2e7d32; font-size:1.4rem; text-align:center; padding:20px;">Desafío de Guardián</div>`;
+        
+        let encImage = histData.encrucijada.image;
+        
+        document.getElementById('visual-frame').innerHTML = `<img src="${encImage}" alt="Desafío de Guardián" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
         
         let opcionesHtml = '';
         q.opciones.forEach((opt, idx) => {
@@ -461,7 +470,7 @@ function mostrarFinalFeliz(idx) {
 
     if (idx < felizArr.length) {
         let item = felizArr[idx];
-        document.getElementById('visual-frame').innerHTML = `<img src="img/${item.id}.jpg" alt="Final Feliz" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
+        document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="Final Feliz" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
         document.getElementById('story-content').innerHTML = `
             <div class="highlight-text-box" style="border-color:#81c784; background:#f1f8e9;">
                 <p style="color:#2e7d32;">${item.text}</p>
@@ -486,7 +495,7 @@ function mostrarFinalTriste(idx) {
 
     if (idx < tristeArr.length) {
         let item = tristeArr[idx];
-        document.getElementById('visual-frame').innerHTML = `<img src="img/${item.id}.jpg" alt="Final Triste" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
+        document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="Final Triste" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
         document.getElementById('story-content').innerHTML = `
             <div class="highlight-text-box" style="border-color:#e57373; background:#ffebee;">
                 <p style="color:#c62828;">${item.text}</p>
