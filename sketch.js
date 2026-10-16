@@ -6,84 +6,84 @@ const gameData = {
             id: "img_1",
             text: "¡Bienvenidos a Cali! La Sucursal del Cielo, un lugar donde la cultura y el arte son vida, y sus majestuosos ecosistemas son su sello personal.",
             audio: "assets/aud/intro/aud_1.mp3",
-            image: "img/img_1.jpg"
+            image: "assets/img/img_1.png"
         },
         {
             id: "img_2",
             text: "En Cali conviven más de 2.2 millones de caleños, rodeados de cientos de especies de animales, flores vibrantes, ríos cristalinos, una gastronomía única y el ritmo inconfundible de nuestra música.",
             audio: "assets/aud/intro/aud_2.mp3",
-            image: "img/img_2.jpg"
+            image: "assets/img/img_2.png"
         },
         {
             id: "img_3",
             text: "Por eso hoy, te invitamos a ser parte de esta aventura donde descubrirás la verdadera riqueza de nuestra fauna, flora y ríos. ¡Tu viaje por la Sucursal Natural comienza ahora!",
             audio: "assets/aud/intro/aud_3.mp3",
-            image: "img/img_3.jpg"
+            image: "assets/img/img_3.png"
         }
     ],
     pantallaInicio: {
         textoPantalla: "Bienvenido a Cali, la Sucursal Natural",
         eslogan: "El lugar donde toda la vida es posible.",
         audio: "assets/aud/intro/aud_z1.mp3",
-        image: "img/logo.png"
+        image: "assets/img/img_x1.jpg"
     },
     modoRelato: [
-        { id: "img_h1", text: "¡Bienvenidos a Santiago de Cali, la Sucursal del Cielo! Una tierra vibrante con más de 2.2 millones de habitantes, hogar de miles de especies animales y un pulmón verde incalculable. Hoy hablaremos de los tesoros naturales más importantes que hacen de nuestra ciudad un paraíso de biodiversidad. ¡Y para conocerlos, tres guías muy especiales han venido a saludarte!", audio: "assets/aud/relato/aud_h1.mp3", image: "img/img_h1.jpg" },
-        { id: "img_h2", text: "¡Hola! Yo soy Catleya, el espíritu de la flora caleña. Represento las hermosas flores y la vegetación que purifican nuestro aire. Un tip: cuando visites zonas verdes, evita arrancar las plantas nativas; ¡ellas sostienen todo nuestro ecosistema urbano!", audio: "assets/aud/relato/aud_h2.mp3", image: "img/img_h2.jpg" },
-        { id: "img_h3", text: "¡Y hola a todos! Yo soy Mango, la tángara multicolor. Represento la fauna alegre de nuestros bosques y parques. ¡Aquí puedes encontrarnos volando libres, así que mantén silencio y observa con respeto!", audio: "assets/aud/relato/aud_h3.mp3", image: "img/img_h3.jpg" },
-        { id: "img_h4", text: "¡Hola, amigos! Yo soy Pancito, la voz de los ríos cristalinos que bajan desde los Farallones. Sin nosotros, la vida en el valle se apagaría. Hoy haremos un recorrido por 3 lugares imperdibles de cada categoría para que vengas a visitarnos y aprendas a cuidarnos.", audio: "assets/aud/relato/aud_h4.mp3", image: "img/img_h4.jpg" },
-        { id: "img_h5", text: "El Río Pance es el “gran gigante cristalino” de la ciudad. ¿Qué encuentras? balnearios naturales, aves ribereñas. ¡Cuidado! No dejes plásticos ni icopor; llévate tu basura.", audio: "assets/aud/relato/aud_h5.mp3", image: "img/img_h5.jpg" },
-        { id: "img_h6", text: "Nace a más de 3.800 metros de altura en los Farallones de Cali. Posee una cuenca principal de más de 4.000 hectáreas protegidas, siendo el principal afluente que oxigena el sur de la ciudad con un caudal cristalino de alta montaña.", audio: "assets/aud/relato/aud_h6.mp3", image: "img/img_h6.jpg" },
-        { id: "img_h7", text: "El Río Bellavista es un refugio de agua pura y vegetación densa. ¿Qué encuentras? Cascadas menores y paz absoluta. ¡Cuidado! Respeta la fauna local y no contamines las fuentes.", audio: "assets/aud/relato/aud_h7.mp3", image: "img/img_h7.jpg" },
-        { id: "img_h8", text: "Es una corriente secundaria de gran valor ecológico que desciende por laderas húmedas con más de 120 hectáreas de bosque ribereño endémico, regulando microclimas locales y sirviendo de corredor biológico para anfibios.", audio: "assets/aud/relato/aud_h8.mp3", image: "img/img_h8.jpg" },
-        { id: "img_h9", text: "El Río Pichindé es Fuente de vida en la alta montaña. ¿Qué encuentras? senderos de trekking y aire puro. ¡Cuidado! No enciendas fogatas.", audio: "assets/aud/relato/aud_h9.mp3", image: "img/img_h9.jpg" },
-        { id: "img_h10", text: "Cuenta con una cuenca hidrográfica de más de 2.500 hectáreas de selva subandina. Sus aguas bajan con gran fuerza modelando cañones profundos que alimentan el río Cali.", audio: "assets/aud/relato/aud_h10.mp3", image: "img/img_h10.jpg" },
-        { id: "img_h11", text: "El Jardín Botánico de Cali es el museo vivo de la ciudad. ¿Qué encuentras? colección de plantas tropicales y bosque seco. ¡Cuidado! Sigue los senderos marcados.", audio: "assets/aud/relato/aud_h11.mp3", image: "img/img_h11.jpg" },
-        { id: "img_h12", text: "Está ubicado en el bosque municipal, abarca más de 7 hectáreas de colecciones vivas con más de 500 especies de plantas tropicales, árboles centenarios y especies nativas en peligro de extinción.", audio: "assets/aud/relato/aud_h12.mp3", image: "img/img_h12.jpg" },
-        { id: "img_h13", text: "El Campo de girasoles es un espectáculo visual impresionante en la zona rural. ¿Qué encuentras? cultivo masivo y fotografía de naturaleza. ¡Cuidado! No pises los cultivos.", audio: "assets/aud/relato/aud_h13.mp3", image: "img/img_h13.jpg" },
-        { id: "img_h14", text: "Es un ecosistema agrícola de más de 2 hectáreas que transforma suelos degradados en parches de alta polinización para abejas, mariposas y aves migratorias, demostrando agricultura sostenible.", audio: "assets/aud/relato/aud_h14.mp3", image: "img/img_h14.jpg" },
-        { id: "img_h15", text: "El Corazón de Pance es un santuario verde. ¿Qué encuentras? educación ambiental y árboles centenarios. ¡Cuidado! Reduce el uso de plásticos de un solo uso.", audio: "assets/aud/relato/aud_h15.mp3", image: "img/img_h15.jpg" },
-        { id: "img_h16", text: "Es un predio de conservación privada y comunitaria de más de 15 hectáreas enfocado en la restauración de guaduales y árboles nativos de sombrío para aves.", audio: "assets/aud/relato/aud_h16.mp3", image: "img/img_h16.jpg" },
-        { id: "img_h17", text: "El Zoológico de Cali es uno de los mejores de América Latina. ¿Qué encuentras? conservación de fauna sudamericana y andina. ¡Cuidado! No alimentes a los animales con comida humana.", audio: "assets/aud/relato/aud_h17.mp3", image: "img/img_h17.jpg" },
-        { id: "img_h18", text: "Es Considerado uno de los mejores de Latinoamérica, alberga más de 2.500 animales de 200 especies en ambientes simulados que replican los bosques secos y húmedos del occidente colombiano.", audio: "assets/aud/relato/aud_h18.mp3", image: "img/img_h18.jpg" },
-        { id: "img_h19", text: "El Parque de las Garzas es un refugio de aves acuáticas al sur de la ciudad. ¿Qué encuentras? avistamiento masivo de garzas al atardecer. ¡Cuidado! Mantén una distancia prudente para no alterarlas.", audio: "assets/aud/relato/aud_h19.mp3", image: "img/img_h19.jpg" },
-        { id: "img_h20", text: "Es Humedal urbano con un área protegida de 3.5 hectáreas que sirve como dormitorio y zona de cría para miles de garzas blancas, bueyeras y aves migratorias del sur del continente.", audio: "assets/aud/relato/aud_h20.mp3", image: "img/img_h20.jpg" },
-        { id: "img_h21", text: "La Granja interactiva local son espacios de conexión rural. ¿Qué encuentras? Animales de granja y pedagogía agroecológica. ¡Cuidado! Trata con respeto y empatía a los animales.", audio: "assets/aud/relato/aud_h21.mp3", image: "img/img_h21.jpg" },
-        { id: "img_h22", text: "Es un espacio de interacción pedagógica donde se rescata la fauna doméstica y silvestre rehabilitada, fomentando la convivencia armónica entre humanos y animales de granja bajo principios de bienestar animal.", audio: "assets/aud/relato/aud_h22.mp3", image: "img/img_h22.jpg" },
-        { id: "img_h23", text: "¡Excelente! Ahora ya conoces cómo estos lugares aportan al equilibrio ecológico de Cali. ¿Estás listo para visitar la ciudad y ser parte activa de su conservación? ¡Tu aventura comienza ahora!", audio: "assets/aud/relato/aud_h23.mp3", image: "img/img_h23.jpg" }
+        { id: "img_h1", text: "¡Bienvenidos a Santiago de Cali, la Sucursal del Cielo! Una tierra vibrante con más de 2.2 millones de habitantes, hogar de miles de especies animales y un pulmón verde incalculable. Hoy hablaremos de los tesoros naturales más importantes que hacen de nuestra ciudad un paraíso de biodiversidad. ¡Y para conocerlos, tres guías muy especiales han venido a saludarte!", audio: "assets/aud/relato/aud_h1.mp3", image: "assets/img/img_h1.jpg" },
+        { id: "img_h2", text: "¡Hola! Yo soy Catleya, el espíritu de la flora caleña. Represento las hermosas flores y la vegetación que purifican nuestro aire. Un tip: cuando visites zonas verdes, evita arrancar las plantas nativas; ¡ellas sostienen todo nuestro ecosistema urbano!", audio: "assets/aud/relato/aud_h2.mp3", image: "assets/img/img_h2.jpg" },
+        { id: "img_h3", text: "¡Y hola a todos! Yo soy Mango, la tángara multicolor. Represento la fauna alegre de nuestros bosques y parques. ¡Aquí puedes encontrarnos volando libres, así que mantén silencio y observa con respeto!", audio: "assets/aud/relato/aud_h3.mp3", image: "assets/img/img_h3.jpg" },
+        { id: "img_h4", text: "¡Hola, amigos! Yo soy Pancito, la voz de los ríos cristalinos que bajan desde los Farallones. Sin nosotros, la vida en el valle se apagaría. Hoy haremos un recorrido por 3 lugares imperdibles de cada categoría para que vengas a visitarnos y aprendas a cuidarnos.", audio: "assets/aud/relato/aud_h4.mp3", image: "assets/img/img_h4.png" },
+        { id: "img_h5", text: "El Río Pance es el “gran gigante cristalino” de la ciudad. ¿Qué encuentras? balnearios naturales, aves ribereñas. ¡Cuidado! No dejes plásticos ni icopor; llévate tu basura.", audio: "assets/aud/relato/aud_h5.mp3", image: "assets/img/img_h5.jpg" },
+        { id: "img_h6", text: "Nace a más de 3.800 metros de altura en los Farallones de Cali. Posee una cuenca principal de más de 4.000 hectáreas protegidas, siendo el principal afluente que oxigena el sur de la ciudad con un caudal cristalino de alta montaña.", audio: "assets/aud/relato/aud_h6.mp3", image: "assets/img/img_h6.jpg" },
+        { id: "img_h7", text: "El Río Bellavista es un refugio de agua pura y vegetación densa. ¿Qué encuentras? Cascadas menores y paz absoluta. ¡Cuidado! Respeta la fauna local y no contamines las fuentes.", audio: "assets/aud/relato/aud_h7.mp3", image: "assets/img/img_h7.jpg" },
+        { id: "img_h8", text: "Es una corriente secundaria de gran valor ecológico que desciende por laderas húmedas con más de 120 hectáreas de bosque ribereño endémico, regulando microclimas locales y sirviendo de corredor biológico para anfibios.", audio: "assets/aud/relato/aud_h8.mp3", image: "assets/img/img_h8.png" },
+        { id: "img_h9", text: "El Río Pichindé es Fuente de vida en la alta montaña. ¿Qué encuentras? senderos de trekking y aire puro. ¡Cuidado! No enciendas fogatas.", audio: "assets/aud/relato/aud_h9.mp3", image: "assets/img/img_h9.png" },
+        { id: "img_h10", text: "Cuenta con una cuenca hidrográfica de más de 2.500 hectáreas de selva subandina. Sus aguas bajan con gran fuerza modelando cañones profundos que alimentan el río Cali.", audio: "assets/aud/relato/aud_h10.mp3", image: "assets/img/img_h10.png" },
+        { id: "img_h11", text: "El Jardín Botánico de Cali es el museo vivo de la ciudad. ¿Qué encuentras? colección de plantas tropicales y bosque seco. ¡Cuidado! Sigue los senderos marcados.", audio: "assets/aud/relato/aud_h11.mp3", image: "assets/img/img_h11.jpg" },
+        { id: "img_h12", text: "Está ubicado en el bosque municipal, abarca más de 7 hectáreas de colecciones vivas con más de 500 especies de plantas tropicales, árboles centenarios y especies nativas en peligro de extinción.", audio: "assets/aud/relato/aud_h12.mp3", image: "assets/img/img_h12.jpg" },
+        { id: "img_h13", text: "El Campo de girasoles es un espectáculo visual impresionante en la zona rural. ¿Qué encuentras? cultivo masivo y fotografía de naturaleza. ¡Cuidado! No pises los cultivos.", audio: "assets/aud/relato/aud_h13.mp3", image: "assets/img/img_h13.png" },
+        { id: "img_h14", text: "Es un ecosistema agrícola de más de 2 hectáreas que transforma suelos degradados en parches de alta polinización para abejas, mariposas y aves migratorias, demostrando agricultura sostenible.", audio: "assets/aud/relato/aud_h14.mp3", image: "assets/img/img_h14.png" },
+        { id: "img_h15", text: "El Corazón de Pance es un santuario verde. ¿Qué encuentras? educación ambiental y árboles centenarios. ¡Cuidado! Reduce el uso de plásticos de un solo uso.", audio: "assets/aud/relato/aud_h15.mp3", image: "assets/img/img_h15.png" },
+        { id: "img_h16", text: "Es un predio de conservación privada y comunitaria de más de 15 hectáreas enfocado en la restauración de guaduales y árboles nativos de sombrío para aves.", audio: "assets/aud/relato/aud_h16.mp3", image: "assets/img/img_h16.png" },
+        { id: "img_h17", text: "El Zoológico de Cali es uno de los mejores de América Latina. ¿Qué encuentras? conservación de fauna sudamericana y andina. ¡Cuidado! No alimentes a los animales con comida humana.", audio: "assets/aud/relato/aud_h17.mp3", image: "assets/img/img_h17.png" },
+        { id: "img_h18", text: "Es Considerado uno de los mejores de Latinoamérica, alberga más de 2.500 animales de 200 especies en ambientes simulados que replican los bosques secos y húmedos del occidente colombiano.", audio: "assets/aud/relato/aud_h18.mp3", image: "assets/img/img_h18.png" },
+        { id: "img_h19", text: "El Parque de las Garzas es un refugio de aves acuáticas al sur de la ciudad. ¿Qué encuentras? avistamiento masivo de garzas al atardecer. ¡Cuidado! Mantén una distancia prudente para no alterarlas.", audio: "assets/aud/relato/aud_h19.mp3", image: "assets/img/img_h19.png" },
+        { id: "img_h20", text: "Es Humedal urbano con un área protegida de 3.5 hectáreas que sirve como dormitorio y zona de cría para miles de garzas blancas, bueyeras y aves migratorias del sur del continente.", audio: "assets/aud/relato/aud_h20.mp3", image: "assets/img/img_h20.png" },
+        { id: "img_h21", text: "La Granja interactiva local son espacios de conexión rural. ¿Qué encuentras? Animales de granja y pedagogía agroecológica. ¡Cuidado! Trata con respeto y empatía a los animales.", audio: "assets/aud/relato/aud_h21.mp3", image: "assets/img/img_h21.png" },
+        { id: "img_h22", text: "Es un espacio de interacción pedagógica donde se rescata la fauna doméstica y silvestre rehabilitada, fomentando la convivencia armónica entre humanos y animales de granja bajo principios de bienestar animal.", audio: "assets/aud/relato/aud_h22.mp3", image: "assets/img/img_h22.png" },
+        { id: "img_h23", text: "¡Excelente! Ahora ya conoces cómo estos lugares aportan al equilibrio ecológico de Cali. ¿Estás listo para visitar la ciudad y ser parte activa de su conservación? ¡Tu aventura comienza ahora!", audio: "assets/aud/relato/aud_h23.mp3", image: "assets/img/img_h23.png" }
     ],
     modoInteraccion: {
         intro: [
-            { id: "img_t1", text: "\"Cali es un verdadero paraíso de biodiversidad. El agua cristalina de nuestros siete ríos, el verdor infinito de los bosques de montaña y el canto de cientos de especies de aves conviven en armonía, haciendo de la Sucursal del Cielo un lugar único donde la vida florece a cada paso.\"", audio: "assets/aud/interaccion/aud_t1.mp3", image: "img/img_t1.jpg" },
-            { id: "img_t2", text: "\"Sin embargo, este equilibrio se está rompiendo. El plástico y los residuos ahogan nuestras fuentes hídricas, la tala inclemente despoja de vegetación a nuestras montañas y la fauna silvestre pierde sus hogares entre el concreto. Si no actuamos pronto, la cuna natural de Cali podría apagarse.\"", audio: "assets/aud/interaccion/aud_t2.mp3", image: "img/img_t2.jpg" },
-            { id: "img_t3", text: "\"El futuro de la ciudad está a punto de decidirse entre el colapso ambiental o un renacer lleno de vida. Hoy tú tienes el poder de cambiar el rumbo de esta historia. ¡Tú serás el héroe de esta historia!\"", audio: "assets/aud/interaccion/aud_t3.mp3", image: "img/img_t3.jpg" }
+            { id: "img_t1", text: "\"Cali es un verdadero paraíso de biodiversidad. El agua cristalina de nuestros siete ríos, el verdor infinito de los bosques de montaña y el canto de cientos de especies de aves conviven en armonía, haciendo de la Sucursal del Cielo un lugar único donde la vida florece a cada paso.\"", audio: "assets/aud/interaccion/aud_t1.mp3", image: "assets/img/img_t1.png" },
+            { id: "img_t2", text: "\"Sin embargo, este equilibrio se está rompiendo. El plástico y los residuos ahogan nuestras fuentes hídricas, la tala inclemente despoja de vegetación a nuestras montañas y la fauna silvestre pierde sus hogares entre el concreto. Si no actuamos pronto, la cuna natural de Cali podría apagarse.\"", audio: "assets/aud/interaccion/aud_t2.mp3", image: "assets/img/img_t2.png" },
+            { id: "img_t3", text: "\"El futuro de la ciudad está a punto de decidirse entre el colapso ambiental o un renacer lleno de vida. Hoy tú tienes el poder de cambiar el rumbo de esta historia. ¡Tú serás el héroe de esta historia!\"", audio: "assets/aud/interaccion/aud_t3.mp3", image: "assets/img/img_t3.png" }
         ],
         seleccionHistoria: {
             id: "img_x2",
             encabezado: "\"Cali es un territorio de biodiversidad milagrosa, pero hoy nuestros ecosistemas enfrentan una encrucijada crítica. Depende de ti mantenerlos con vida o dejar que colapsen. ¿Estás listo para asumir el desafío y convertirte en el guardián de nuestra naturaleza?\"",
             instruccion: "\"Elige la historia que desees realizar y salva un ecosistema:\"",
             audio: "assets/aud/interaccion/aud_z2.mp3",
-            image: "img/img_x2.jpg"
+            image: "assets/img/img_x2.png"
         },
         historias: {
             rios: {
                 titulo: "Historia 1: El Llanto del Agua",
                 escenas: [
-                    { id: "img_r1", text: "\"¡Hola! Soy Pancito, el espíritu de los ríos que nacen en los majestuosos Farallones de Cali. Me encargo de mantener fresca la ciudad y dar de beber a miles de seres vivos. Hoy seré tu guía en esta aventura hídrica.\"", audio: "assets/aud/interaccion/aud_r1.mp3" },
-                    { id: "img_r2", text: "\"Cali es privilegiada. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "assets/aud/interaccion/aud_r2.mp3" },
-                    { id: "img_r3", text: "\"Nuestros ríos nacen a más de 3.000 metros de altura. En sus riberas puedes hacer caminatas ecológicas, contemplar cascadas y sentir la fuerza del agua pura que oxigena todo nuestro valle.\"", audio: "assets/aud/interaccion/aud_r3.mp3" },
-                    { id: "img_r4", text: "\"¡Pero algo anda muy mal! Toneladas de plástico se acumulan en mis orillas, la tala desmedida seca los nacimientos y la contaminación nos está ahogando.\"", audio: "assets/aud/interaccion/aud_r4.mp3" }
+                    { id: "img_r1", text: "\"¡Hola! Soy Pancito, el espíritu de los ríos que nacen en los majestuosos Farallones de Cali. Me encargo de mantener fresca la ciudad y dar de beber a miles de seres vivos. Hoy seré tu guía en esta aventura hídrica.\"", audio: "assets/aud/interaccion/aud_r1.mp3", image: "assets/img/img_r1.png"},
+                    { id: "img_r2", text: "\"Cali es privilegiada. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "assets/aud/interaccion/aud_r2.mp3", image: "assets/img/img_r2.png" },
+                    { id: "img_r3", text: "\"Nuestros ríos nacen a más de 3.000 metros de altura. En sus riberas puedes hacer caminatas ecológicas, contemplar cascadas y sentir la fuerza del agua pura que oxigena todo nuestro valle.\"", audio: "assets/aud/interaccion/aud_r3.mp3", image: "assets/img/img_r3.png" },
+                    { id: "img_r4", text: "\"¡Pero algo anda muy mal! Toneladas de plástico se acumulan en mis orillas, la tala desmedida seca los nacimientos y la contaminación nos está ahogando.\"", audio: "assets/aud/interaccion/aud_r4.mp3", image: "assets/img/img_r4.png" }
                 ],
-                encrucijada: { id: "img_x3", texto: "\"Estamos a punto de perder nuestras fuentes de agua para siempre. Necesitamos a un verdadero héroe que tome las decisiones correctas. ¿Aceptas la misión de salvar los ríos de Cali?\"", audio: "assets/aud/interaccion/aud_z3.mp3", opcionA: "A) ¡Sí, quiero salvar los ríos!", opcionB: "B) No me importa, continuar la rutina" },
+                encrucijada: { id: "img_x3", texto: "\"Estamos a punto de perder nuestras fuentes de agua para siempre. Necesitamos a un verdadero héroe que tome las decisiones correctas. ¿Aceptas la misión de salvar los ríos de Cali?\"", audio: "assets/aud/interaccion/aud_z3.mp3", image: "assets/img/img_x3.png", opcionA: "A) ¡Sí, quiero salvar los ríos!", opcionB: "B) No me importa, continuar la rutina" },
                 feliz: [
-                    { id: "img_r5", text: "\"¡Sabía que podía contar contigo! Veo a personas concientizadas recogiendo residuos y cuidando las cuencas altas. ¡Aún podemos lograrlo!\"", audio: "assets/aud/interaccion/aud_r5.mp3" },
-                    { id: "img_r6", text: "\"¡Mira cómo cambia todo! Al ahorrar agua en casa y proteger los árboles ribereños, el cauce vuelve a tomar fuerza.\"", audio: "assets/aud/interaccion/aud_r6.mp3" },
-                    { id: "img_r7", text: "\"¡Lo logramos! Los ríos de Cali vuelven a correr libres y cristalinos. ¡Gracias a ti la Sucursal Natural sigue viva! Has ganado el título de Guardián del Agua.\"", audio: "assets/aud/interaccion/aud_r7.mp3" }
+                    { id: "img_r5", text: "\"¡Sabía que podía contar contigo! Veo a personas concientizadas recogiendo residuos y cuidando las cuencas altas. ¡Aún podemos lograrlo!\"", audio: "assets/aud/interaccion/aud_r5.mp3", image: "assets/img/img_r5.png" },
+                    { id: "img_r6", text: "\"¡Mira cómo cambia todo! Al ahorrar agua en casa y proteger los árboles ribereños, el cauce vuelve a tomar fuerza.\"", audio: "assets/aud/interaccion/aud_r6.mp3", image: "assets/img/img_r6.png" },
+                    { id: "img_r7", text: "\"¡Lo logramos! Los ríos de Cali vuelven a correr libres y cristalinos. ¡Gracias a ti la Sucursal Natural sigue viva! Has ganado el título de Guardián del Agua.\"", audio: "assets/aud/interaccion/aud_r7.mp3", image: "assets/img/img_r7.png" }
                 ],
                 triste: [
-                    { id: "img_r8", text: "\"Oh no... nadie escucha nuestro llamado. Las botellas siguen cayendo al agua y el calor seca mis fuentes día a día.\"", audio: "assets/aud/interaccion/aud_r8.mp3" },
-                    { id: "img_r9", text: "\"Nadie nos ayuda... El agua potable se agota, los peces mueren y la ciudad empieza a sufrir de una sed extrema.\"", audio: "assets/aud/interaccion/aud_r9.mp3" },
-                    { id: "img_r10", text: "\"Es el fin... Los ríos de Cali han muerto. Sin agua, toda la vida en la ciudad se ha apagado...\"", audio: "assets/aud/interaccion/aud_r10.mp3" }
+                    { id: "img_r8", text: "\"Oh no... nadie escucha nuestro llamado. Las botellas siguen cayendo al agua y el calor seca mis fuentes día a día.\"", audio: "assets/aud/interaccion/aud_r8.mp3", image: "assets/img/img_r8.png" },
+                    { id: "img_r9", text: "\"Nadie nos ayuda... El agua potable se agota, los peces mueren y la ciudad empieza a sufrir de una sed extrema.\"", audio: "assets/aud/interaccion/aud_r9.mp3", image: "assets/img/img_r9.png" },
+                    { id: "img_r10", text: "\"Es el fin... Los ríos de Cali han muerto. Sin agua, toda la vida en la ciudad se ha apagado...\"", audio: "assets/aud/interaccion/aud_r10.mp3", image: "assets/img/img_r10.png" }
                 ],
                 trivia: [
                     { pregunta: "¿Cómo ayudarías principalmente a que los ríos de Cali no se sequen en verano?", opciones: ["A) Dejar las llaves abiertas", "B) Ahorrar agua en casa y proteger las cuencas altas", "C) Echar agua embotellada al río."], correcta: 1 },
@@ -94,21 +94,21 @@ const gameData = {
             flora: {
                 titulo: "Historia 2: El Silencio del Bosque",
                 escenas: [
-                    { id: "img_f1", text: "\"¡Hola! Soy Catleya, el espíritu de la flora caleña. Me encargo de florecer en los parques, purificar el aire y vestir de colores nuestros cerros. Hoy seré tu guía botánica.\"", audio: "assets/aud/interaccion/aud_f1.mp3" },
-                    { id: "img_f2", text: "\"Nuestra ciudad late a través del museo vivo del Jardín Botánico de Cali, los dorados Campos de Girasoles en la zona rural y el exuberante santuario del Corazón de Pance.\"", audio: "assets/aud/interaccion/aud_f2.mp3" },
-                    { id: "img_f3", text: "\"Aquí habitan más de 500 especies de plantas tropicales y guaduas ancestrales que capturan el carbono y regulan la temperatura de nuestra hermosa ciudad.\"", audio: "assets/aud/interaccion/aud_f3.mp3" },
-                    { id: "img_f4", text: "\"¡Pero la sombra de la destrucción nos acecha! La tala ilegal para madera y los incendios provocados en los cerros están arrasando con nuestros bosques nativos.\"", audio: "assets/aud/interaccion/aud_f4.mp3" }
+                    { id: "img_f1", text: "\"¡Hola! Soy Catleya, el espíritu de la flora caleña. Me encargo de florecer en los parques, purificar el aire y vestir de colores nuestros cerros. Hoy seré tu guía botánica.\"", audio: "assets/aud/interaccion/aud_f1.mp3", image: "assets/img/img_f1.png" },
+                    { id: "img_f2", text: "\"Nuestra ciudad late a través del museo vivo del Jardín Botánico de Cali, los dorados Campos de Girasoles en la zona rural y el exuberante santuario del Corazón de Pance.\"", audio: "assets/aud/interaccion/aud_f2.mp3", image: "assets/img/img_f2.png" },
+                    { id: "img_f3", text: "\"Aquí habitan más de 500 especies de plantas tropicales y guaduas ancestrales que capturan el carbono y regulan la temperatura de nuestra hermosa ciudad.\"", audio: "assets/aud/interaccion/aud_f3.mp3", image: "assets/img/img_f3.png" },
+                    { id: "img_f4", text: "\"¡Pero la sombra de la destrucción nos acecha! La tala ilegal para madera y los incendios provocados en los cerros están arrasando con nuestros bosques nativos.\"", audio: "assets/aud/interaccion/aud_f4.mp3", image: "assets/img/img_f4.png" }
                 ],
-                encrucijada: { id: "img_x4", texto: "\"Sin vegetación, Cali se convertirá en un desierto gris y sin aire puro. ¿Nos ayudarás a reforestar y proteger la flora de nuestra tierra?\"", audio: "assets/aud/interaccion/aud_z4.mp3", opcionA: "A) ¡Sí, quiero proteger el bosque!", opcionB: "B) No me interesa" },
+                encrucijada: { id: "img_x4", texto: "\"Sin vegetación, Cali se convertirá en un desierto gris y sin aire puro. ¿Nos ayudarás a reforestar y proteger la flora de nuestra tierra?\"", audio: "assets/aud/interaccion/aud_z4.mp3", image: "assets/img/img_x4.png", opcionA: "A) ¡Sí, quiero proteger el bosque!", opcionB: "B) No me interesa" },
                 feliz: [
-                    { id: "img_f5", text: "\"¡Tu apoyo me llena de vida! La comunidad se ha unido para plantar guayacanes y orquídeas nativas en las zonas afectadas.\"", audio: "assets/aud/interaccion/aud_f5.mp3" },
-                    { id: "img_f6", text: "\"¡El aire vuelve a ser fresco! Al respetar los senderos y evitar las quemas, el pulmón verde de Cali respira de nuevo.\"", audio: "assets/aud/interaccion/aud_f6.mp3" },
-                    { id: "img_f7", text: "\"¡Lo logramos! Las flores y los bosques de Cali vuelven a brillar con todo su esplendor. ¡Eres el Guardián de la Flora!\"", audio: "assets/aud/interaccion/aud_f7.mp3" }
+                    { id: "img_f5", text: "\"¡Tu apoyo me llena de vida! La comunidad se ha unido para plantar guayacanes y orquídeas nativas en las zonas afectadas.\"", audio: "assets/aud/interaccion/aud_f5.mp3", image: "assets/img/img_f5.png" },
+                    { id: "img_f6", text: "\"¡El aire vuelve a ser fresco! Al respetar los senderos y evitar las quemas, el pulmón verde de Cali respira de nuevo.\"", audio: "assets/aud/interaccion/aud_f6.mp3", image: "assets/img/img_f6.png" },
+                    { id: "img_f7", text: "\"¡Lo logramos! Las flores y los bosques de Cali vuelven a brillar con todo su esplendor. ¡Eres el Guardián de la Flora!\"", audio: "assets/aud/interaccion/aud_f7.mp3", image: "assets/img/img_f7.png" }
                 ],
                 triste: [
-                    { id: "img_f8", text: "\"Las llamas siguen advancing sin control y nadie hace nada para detener la tala en los cerros...\"", audio: "assets/aud/interaccion/aud_f8.mp3" },
-                    { id: "img_f9", text: "\"Las orquídeas han desaparecido... Sin árboles de sombrío, el calor de la ciudad se vuelve insoportable.\"", audio: "assets/aud/interaccion/aud_f9.mp3" },
-                    { id: "img_f10", text: "\"El último árbol ha caído. Cali ha perdido su oxígeno y su color...\"", audio: "assets/aud/interaccion/aud_f10.mp3" }
+                    { id: "img_f8", text: "\"Las llamas siguen advancing sin control y nadie hace nada para detener la tala en los cerros...\"", audio: "assets/aud/interaccion/aud_f8.mp3", image: "assets/img/img_f8.png" },
+                    { id: "img_f9", text: "\"Las orquídeas han desaparecido... Sin árboles de sombrío, el calor de la ciudad se vuelve insoportable.\"", audio: "assets/aud/interaccion/aud_f9.mp3", image: "assets/img/img_f9.png" },
+                    { id: "img_f10", text: "\"El último árbol ha caído. Cali ha perdido su oxígeno y su color...\"", audio: "assets/aud/interaccion/aud_f10.mp3", image: "assets/img/img_f10.png" }
                 ],
                 trivia: [
                     { pregunta: "¿Qué acción ayuda directamente a proteger los bosques urbanos de Cali?", opciones: ["A) Plantar árboles nativos y no talar", "B) Cortar arbustos para hacer espacio", "C) Quemar hojas secas."], correcta: 0 },
@@ -119,21 +119,21 @@ const gameData = {
             fauna: {
                 titulo: "Historia 3: El Vuelo Apagado",
                 escenas: [
-                    { id: "img_a1", text: "\"¡Hola! Soy Mango, la tángara multicolor. Represento la vibrante fauna silvestre que llena de cantos y vida los cielos y bosques de la ciudad. ¡Acompáñame a volar!\"", audio: "assets/aud/interaccion/aud_a1.mp3" },
-                    { id: "img_a2", text: "\"Cali es refugio de fauna. Desde los esfuerzos de conservación del Zoológico de Cali, hasta el descanso milagroso de las garzas en el humedal del sur y las granjas pedagógicas.\"", audio: "assets/aud/interaccion/aud_a2.mp3" },
-                    { id: "img_a3", text: "\"Más de 500 especies de aves cruzan nuestros cielos cada día. Somos una de las ciudades con mayor diversidad avifaunística de todo el planeta.\"", audio: "assets/aud/interaccion/aud_a3.mp3" },
-                    { id: "img_a4", text: "\"¡Pero nuestras alas se apagan! El tráfico ilegal de animales silvestres, las jaulas y la destrucción de nuestros nidos nos están dejando sin hogar.\"", audio: "assets/aud/interaccion/aud_a4.mp3" }
+                    { id: "img_a1", text: "\"¡Hola! Soy Mango, la tángara multicolor. Represento la vibrante fauna silvestre que llena de cantos y vida los cielos y bosques de la ciudad. ¡Acompáñame a volar!\"", audio: "assets/aud/interaccion/aud_a1.mp3", image: "assets/img/img_a1.png" },
+                    { id: "img_a2", text: "\"Cali es refugio de fauna. Desde los esfuerzos de conservación del Zoológico de Cali, hasta el descanso milagroso de las garzas en el humedal del sur y las granjas pedagógicas.\"", audio: "assets/aud/interaccion/aud_a2.mp3", image: "assets/img/img_a2.png" },
+                    { id: "img_a3", text: "\"Más de 500 especies de aves cruzan nuestros cielos cada día. Somos una de las ciudades con mayor diversidad avifaunística de todo el planeta.\"", audio: "assets/aud/interaccion/aud_a3.mp3", image: "assets/img/img_a3.png" },
+                    { id: "img_a4", text: "\"¡Pero nuestras alas se apagan! El tráfico ilegal de animales silvestres, las jaulas y la destrucción de nuestros nidos nos están dejando sin hogar.\"", audio: "assets/aud/interaccion/aud_a4.mp3", image: "assets/img/img_a4.png" }
                 ],
-                encrucijada: { id: "img_x5", texto: "\"Si los animales silvestres desaparecen, el ecosistema colapsará. ¿Nos ayudarás a defender la fauna de Cali?\"", audio: "assets/aud/interaccion/aud_z5.mp3", opcionA: "A) ¡Sí, quiero proteger la fauna!", opcionB: "B) No me importa" },
+                encrucijada: { id: "img_x5", texto: "\"Si los animales silvestres desaparecen, el ecosistema colapsará. ¿Nos ayudarás a defender la fauna de Cali?\"", audio: "assets/aud/interaccion/aud_z5.mp3", image: "assets/img/img_x5.png", opcionA: "A) ¡Sí, quiero proteger la fauna!", opcionB: "B) No me importa" },
                 feliz: [
-                    { id: "img_a5", text: "\"¡Gracias por alzar tu voz! La gente ha entendido que las aves y animales silvestres deben vivir libres y no en cautiverio.\"", audio: "assets/aud/interaccion/aud_a5.mp3" },
-                    { id: "img_a6", text: "\"¡Nuestros nidos vuelven a estar seguros! Al respetar su espacio y denunciar el tráfico ilegal, la naturaleza recupera su equilibrio.\"", audio: "assets/aud/interaccion/aud_a6.mp3" },
-                    { id: "img_a7", text: "\"¡Cali recuperó su canto! Los cielos de la Sucursal Natural están más vivos que nunca. ¡Eres el Guardián de la Fauna!\"", audio: "assets/aud/interaccion/aud_a7.mp3" }
+                    { id: "img_a5", text: "\"¡Gracias por alzar tu voz! La gente ha entendido que las aves y animales silvestres deben vivir libres y no en cautiverio.\"", audio: "assets/aud/interaccion/aud_a5.mp3", image: "assets/img/img_a5.png" },
+                    { id: "img_a6", text: "\"¡Nuestros nidos vuelven a estar seguros! Al respetar su espacio y denunciar el tráfico ilegal, la naturaleza recupera su equilibrio.\"", audio: "assets/aud/interaccion/aud_a6.mp3", image: "assets/img/img_a6.png" },
+                    { id: "img_a7", text: "\"¡Cali recuperó su canto! Los cielos de la Sucursal Natural están más vivos que nunca. ¡Eres el Guardián de la Fauna!\"", audio: "assets/aud/interaccion/aud_a7.mp3", image: "assets/img/img_a7.png" }
                 ],
                 triste: [
-                    { id: "img_a8", text: "\"El comercio ilegal se lleva a mis hermanos y las trampas en la ciudad siguen cobrando vidas...\"", audio: "assets/aud/interaccion/aud_a8.mp3" },
-                    { id: "img_a9", text: "\"Ya nadie canta al amanecer... Las jaulas se llenaron y los cielos se quedaron en absoluto silencio.\"", audio: "assets/aud/interaccion/aud_a9.mp3" },
-                    { id: "img_a10", text: "\"La fauna silvestre ha desaparecido de Cali. Un cielo sin alas es un cielo sin vida...\"", audio: "assets/aud/interaccion/aud_a10.mp3" }
+                    { id: "img_a8", text: "\"El comercio ilegal se lleva a mis hermanos y las trampas en la ciudad siguen cobrando vidas...\"", audio: "assets/aud/interaccion/aud_a8.mp3", image: "assets/img/img_a8.png" },
+                    { id: "img_a9", text: "\"Ya nadie canta al amanecer... Las jaulas se llenaron y los cielos se quedaron en absoluto silencio.\"", audio: "assets/aud/interaccion/aud_a9.mp3", image: "assets/img/img_a9.png" },
+                    { id: "img_a10", text: "\"La fauna silvestre ha desaparecido de Cali. Un cielo sin alas es un cielo sin vida...\"", audio: "assets/aud/interaccion/aud_a10.mp3", image: "assets/img/img_a10.png" }
                 ],
                 trivia: [
                     { pregunta: "¿Qué debes hacer si ves un ave silvestre herida en la ciudad?", opciones: ["A) Encerrarla en una jaula pequeña", "B) Reportarla al Dagma o autoridades ambientales", "C) Ignorarla."], correcta: 1 },
