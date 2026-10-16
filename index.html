@@ -8,259 +8,248 @@
     <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <style>
-        :root {
-            --bg-book: #fdfbf7;
-            --leather: #2c1d11;
-            --accent: #2e7d32;
-            --accent-hover: #1b5e20;
-            --text-dark: #233d26;
-        }
-        
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
+    :root {
+        --accent: #2e7d32;
+        --accent-hover: #1b5e20;
+        --text-dark: #233d26;
+    }
+    
+    * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1b3b2b 0%, #0d1f14 100%);
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1b3b2b 0%, #0d1f14 100%);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
 
+    .book-container {
+        width: 96vw;
+        max-width: 1100px;
+        aspect-ratio: 16 / 9;
+        max-height: 90vh;
+        background: #000;
+        border-radius: 12px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 4px solid #2c1d11;
+        overflow: hidden;
+    }
+
+    .img-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 1;
+    }
+
+    .img-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; /* Centra todo el contenido horizontalmente */
+        padding: 15px;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+
+    .audio-bar {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(232, 245, 233, 0.85);
+        padding: 3px 10px;
+        border-radius: 20px;
+        border: 1px solid #c8e6c9;
+        min-width: 140px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    #story-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+        margin-bottom: 8px;
+    }
+
+    /* Recuadro de texto: al 60% de transparencia y reducido a la mitad de ancho */
+    .highlight-text-box {
+        background: rgba(255, 255, 255, 0.60) !important; /* 60% de opacidad */
+        backdrop-filter: blur(4px); /* Suaviza la imagen de fondo */
+        border: 2px solid rgba(46, 125, 50, 0.8);
+        border-radius: 10px;
+        padding: 10px 18px;
+        width: 65%; /* Reducido casi a la mitad */
+        max-width: 700px;
+        margin: 0 auto;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        text-align: center !important;
+    }
+
+    /* TODOS los textos alineados al centro */
+    .highlight-text-box p, 
+    .highlight-text-box h3, 
+    .highlight-text-box span {
+        color: var(--text-dark);
+        font-size: clamp(0.85rem, 1.8vh, 1.05rem);
+        line-height: 1.4;
+        font-weight: 600;
+        margin: 0;
+        text-align: center !important;
+    }
+
+    #action-area {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    /* Botones más pequeños y contenidos */
+    button {
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        padding: 7px 16px; /* Padding más compacto */
+        font-size: 0.82rem; /* Texto más pequeño */
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        transition: all 0.2s ease;
+        min-height: 36px;
+        text-align: center;
+    }
+
+    button:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-1px);
+    }
+
+    /* Botones de trivia compactos */
+    .trivia-btn {
+        background-color: rgba(69, 90, 100, 0.85);
+        text-align: center !important;
+        padding: 8px 12px;
+        font-size: 0.82rem;
+        border-radius: 6px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        flex: 1;
+        min-width: 140px;
+    }
+
+    .nav-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 3px 12px;
+        border-radius: 6px;
+        margin-top: 4px;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .footer-center {
+        font-size: 0.7rem;
+        color: #fff;
+        margin: 0 auto;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    .footer-right {
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #81c784;
+        position: absolute;
+        right: 15px;
+    }
+
+    @media (max-width: 768px) {
         .book-container {
-            width: 94vw;
-            max-width: 1200px;
-            height: 88vh;
-            background: var(--bg-book);
-            border-radius: 12px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-            display: flex;
-            position: relative;
-            border: 6px solid var(--leather);
-            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            border: none;
+            aspect-ratio: unset;
         }
-
-        .book-container::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: rgba(0,0,0,0.15);
-            z-index: 10;
-        }
-
-        .page {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .page-left {
-            border-right: 1px solid #ddd;
-            align-items: center;
-            justify-content: center;
-            background: #fffdf9;
-        }
-
-        .page-right {
-            background: var(--bg-book);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .img-frame {
-            width: 100%;
-            height: 100%;
-            background: #f0f0f0;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid #c8e6c9;
-            overflow: hidden;
-        }
-
-        .img-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Contenedor dinámico central */
-        #story-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin: 10px 0;
-            overflow: hidden;
-        }
-
-        /* La caja verde ahora ocupa TODO el espacio disponible hasta los botones */
         .highlight-text-box {
-            background: #e8f5e9;
-            border: 2px solid #a5d6a7;
-            border-radius: 12px;
-            padding: clamp(15px, 3vh, 30px);
-            width: 100%;
-            flex: 1;
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
+            width: 90%; /* En móviles se ensancha un poco para legibilidad */
         }
-
-        .highlight-text-box p {
-            color: var(--text-dark);
-            font-size: clamp(1rem, 2.2vh, 1.25rem);
-            line-height: 1.6;
-            font-weight: 500;
-            margin: 0;
-            text-align: center;
-        }
-
-        /* Grupo de botones simétricos */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            width: 100%;
-            margin-bottom: 5px;
-        }
-
-        button {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            transition: all 0.2s ease;
-        }
-
-        button:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .trivia-btn {
-            background-color: #455a64;
-            width: 100%;
-            text-align: left;
-            padding: 12px 18px;
-            font-size: 0.95rem;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .audio-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #e8f5e9;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin: 0 auto;
-            border: 1px solid #c8e6c9;
-            width: fit-content;
-            min-width: 180px;
-        }
-
-        .nav-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #ddd;
-            padding-top: 8px;
-            margin-top: 5px;
-            position: relative;
-        }
-
-        .footer-center {
-            font-size: 0.8rem;
-            color: #555;
-            margin: 0 auto;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-
-        .footer-right {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: #2e7d32;
-            position: absolute;
-            right: 0;
-        }
-
-        @media (max-width: 768px) {
-            .book-container {
-                flex-direction: column;
-                height: 96vh;
-                width: 96vw;
-            }
-            .page-left { height: 38%; border-right: none; border-bottom: 1px solid #ddd; }
-            .page-right { height: 62%; }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
     <div class="book-container">
-        <!-- PÁGINA IZQUIERDA -->
-        <div class="page page-left">
-            <div class="img-frame" id="visual-frame">
-                [Cargando Imagen...]
-            </div>
+        <!-- CAPA VISUAL (IMAGEN) -->
+        <div class="img-frame" id="visual-frame">
+            [Cargando Imagen...]
         </div>
 
-        <!-- PÁGINA DERECHA -->
+        <!-- CAPA INTERACTIVA (TEXTOS Y BOTONES) -->
         <div class="page page-right">
             <div>
                 <div class="audio-bar" id="audio-bar-container" style="display: none;">
                     <span id="audio-bar-label" style="font-size: 0.75rem; font-weight: bold; color: #1b5e20;">🎵 Ambiente</span>
-                    <button id="btn-audio-toggle" onclick="toggleControlAudio()" style="padding: 3px 10px; font-size: 0.7rem; border-radius: 12px;">🔊 ON</button>
+                    <button id="btn-audio-toggle" onclick="toggleControlAudio()" style="padding: 3px 10px; font-size: 0.7rem; border-radius: 12px; min-height: auto;">🔊 ON</button>
                 </div>
             </div>
 
-            <!-- Contenedor central que se expande rellenando todo el espacio -->
             <div id="story-container">
-                <div id="story-content" style="width: 100%; height: 100%; display: flex; flex-direction: column;">
-                    <!-- Contenido inyectado dinámicamente -->
+                <div id="story-content" style="width: 100%; display: flex; flex-direction: column;">
+                    <!-- Contenido inyectado desde sketch.js -->
                 </div>
             </div>
 
             <div>
                 <div id="action-area">
-                    <!-- Botones dinámicos -->
+                    <!-- Botones inyectados desde sketch.js -->
                 </div>
 
                 <div class="nav-footer">

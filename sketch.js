@@ -70,7 +70,7 @@ const gameData = {
                 titulo: "Historia 1: El Llanto del Agua",
                 escenas: [
                     { id: "img_r1", text: "\"¡Hola! Soy Pancito, el espíritu de los ríos que nacen en los majestuosos Farallones de Cali. Me encargo de mantener fresca la ciudad y dar de beber a miles de seres vivos. Hoy seré tu guía en esta aventura hídrica.\"", audio: "assets/aud/interaccion/aud_r1.mp3", image: "assets/img/img_r1.png" },
-                    { id: "img_r2", text: "\"Cali es privilegiada. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "assets/aud/interaccion/aud_r2.mp3", image: "assets/img/img_r2.png" },
+                    { id: "img_r2", text: "\"Cali es privileged. Aquí disfrutamos del gigante Río Pance, las aguas cristalinas del Río Pichindé y los rincones tranquilos del Río Bellavista. Lugares mágicos para refrescarse y conectar con la naturaleza.\"", audio: "assets/aud/interaccion/aud_r2.mp3", image: "assets/img/img_r2.png" },
                     { id: "img_r3", text: "\"Nuestros ríos nacen a más de 3.000 metros de altura. En sus riberas puedes hacer caminatas ecológicas, contemplar cascadas y sentir la fuerza del agua pura que oxigena todo nuestro valle.\"", audio: "assets/aud/interaccion/aud_r3.mp3", image: "assets/img/img_r3.png" },
                     { id: "img_r4", text: "\"¡Pero algo anda muy mal! Toneladas de plástico se acumulan en mis orillas, la tala desmedida seca los nacimientos y la contaminación nos está ahogando.\"", audio: "assets/aud/interaccion/aud_r4.mp3", image: "assets/img/img_r4.png" }
                 ],
@@ -113,7 +113,7 @@ const gameData = {
                 trivia: [
                     { pregunta: "¿Qué acción ayuda directamente a proteger los bosques urbanos de Cali?", opciones: ["A) Plantar árboles nativos y no talar", "B) Cortar arbustos para hacer espacio", "C) Quemar hojas secas."], correcta: 0 },
                     { pregunta: "¿Por qué son importantes las orquídeas y plantas nativas en el ecosistema?", opciones: ["A) Atraen plagas", "B) Albergan polinizadores esenciales y regulan la humedad", "C) No tienen función."], correcta: 1 },
-                    { pregunta: "Si visitas el Jardín Botánico, ¿qué regla debes seguir estrictamente?", opciones: ["A) Arrancar flores de recuerdo", "B) Seguir los senderos y no dañar la vegetación", "C) Dejar basura."], correcta: 1 }
+                    { pregunta: "Si visitas el Jardín Botánico, ¿qué regla debes seguir strictly?", opciones: ["A) Arrancar flores de recuerdo", "B) Seguir los senderos y no dañar la vegetación", "C) Dejar basura."], correcta: 1 }
                 ]
             },
             fauna: {
@@ -240,27 +240,22 @@ function mostrarPantallaInicio() {
     actualizarBarraAudio('ambiente');
     const inicio = gameData.pantallaInicio;
 
-    document.getElementById('visual-frame').innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:20px; text-align:center; height:100%;">
-            <img src="${inicio.image}" alt="Logo UAO" style="max-height:110px; object-fit:contain; margin-bottom:12px;" onerror="this.style.display='none'">
-            <h3 style="color:#2e7d32; font-weight:bold; margin:5px 0; font-size:1.1rem;">Universidad Autónoma de Occidente</h3>
-            <p style="font-size:0.85rem; color:#555; margin:0;">Novela Visual Interactiva - Cali, La Sucursal Natural</p>
-        </div>
-    `;
+    document.getElementById('visual-frame').innerHTML = `<img src="${inicio.image}" alt="Inicio" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
+    
     document.getElementById('story-content').innerHTML = `
-        <div class="highlight-text-box">
-            <h3 style="font-size: 1.3rem; color: #1b5e20; margin-bottom:8px; font-weight: bold;">${inicio.textoPantalla}</h3>
-            <p><em>"${inicio.eslogan}"</em></p>
+        <div class="highlight-text-box" style="text-align: center;">
+            <h3 style="font-size: 1.2rem; color: #1b5e20; margin: 0 0 6px 0; font-weight: bold;">${inicio.textoPantalla}</h3>
+            <p style="text-align: center;"><em>"${inicio.eslogan}"</em></p>
         </div>
     `;
     reproducirNarracion(inicio.audio);
 
     document.getElementById('action-area').innerHTML = `
-        <div class="btn-group" style="flex-direction: column; gap: 10px;">
-            <button onclick="iniciarModoRelato(0)" style="width: 100%;">📖 Modo Relato</button>
-            <button onclick="iniciarModoInteraccionIntro(0)" style="width: 100%;">🎮 Modo Interactivo</button>
-            <a href="assets/docs/Cali_La_Sucursal_Natural_Guia_del_Viajero.pdf" download style="text-decoration: none; width:100%;">
-                <button style="width: 100%; background: #b26a00;">📥 Descargar Guía Turística (PDF)</button>
+        <div class="btn-group" style="flex-direction: row; gap: 8px;">
+            <button onclick="iniciarModoRelato(0)" style="flex: 1;">📖 Modo Relato</button>
+            <button onclick="iniciarModoInteraccionIntro(0)" style="flex: 1;">🎮 Modo Interactivo</button>
+            <a href="assets/docs/Cali_La_Sucursal_Natural_Guia_del_Viajero.pdf" download style="text-decoration: none; flex: 1;">
+                <button style="width: 100%; background: #b26a00;">📥 Guía Turística</button>
             </a>
         </div>
     `;
@@ -324,24 +319,24 @@ function mostrarMenuSeleccionHistorias() {
     document.getElementById('visual-frame').innerHTML = `<img src="${sel.image}" alt="Selección" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
     document.getElementById('story-content').innerHTML = `
         <div class="highlight-text-box">
-            <p>${sel.encabezado}</p>
-            <p style="color:#1b5e20; margin-top:10px; font-weight:bold;">${sel.instruccion}</p>
+            <p style="text-align: center;">${sel.encabezado}</p>
+            <p style="color:#1b5e20; margin-top:6px; font-weight:bold; text-align: center;">${sel.instruccion}</p>
         </div>
     `;
     reproducirNarracion(sel.audio);
 
+    // Distribución en fila idéntica a la del menú principal
     document.getElementById('action-area').innerHTML = `
-        <div class="btn-group" style="flex-direction: column; gap: 8px;">
-            <button onclick="cargarHistoriaInteractiva('rios')" style="width:100%;">🌊 Historia 1: El Llanto del Agua</button>
-            <button onclick="cargarHistoriaInteractiva('flora')" style="width:100%;">🌸 Historia 2: El Silencio del Bosque</button>
-            <button onclick="cargarHistoriaInteractiva('fauna')" style="width:100%;">🦜 Historia 3: El Vuelo Apagado</button>
-            <button onclick="mostrarPantallaInicio()" style="background:#555; width:100%; margin-top:3px;">⬅️ Volver al Menú</button>
+        <div class="btn-group" style="flex-direction: row; gap: 8px;">
+            <button onclick="cargarHistoriaInteractiva('rios')" style="flex: 1;">🌊 1: El Llanto del Agua</button>
+            <button onclick="cargarHistoriaInteractiva('flora')" style="flex: 1;">🌸 2: El Silencio del Bosque</button>
+            <button onclick="cargarHistoriaInteractiva('fauna')" style="flex: 1;">🦜 3: El Vuelo Apagado</button>
+            <button onclick="mostrarPantallaInicio()" style="background:#555; flex: 0.6;">⬅️ Menú</button>
         </div>
     `;
     document.getElementById('section-name').innerText = "Misiones";
     document.getElementById('page-indicator').innerText = "";
 }
-
 function cargarHistoriaInteractiva(tipo) {
     historiaActual = tipo;
     historiaIndex = 0;
@@ -382,15 +377,16 @@ function mostrarPantallaEncrucijadaHistoria() {
     document.getElementById('visual-frame').innerHTML = `<img src="${enc.image}" alt="Encrucijada" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
     document.getElementById('story-content').innerHTML = `
         <div class="highlight-text-box">
-            <p>${enc.texto}</p>
+            <p style="text-align: center;">${enc.texto}</p>
         </div>
     `;
     reproducirNarracion(enc.audio);
 
+    // Botones de la encrucijada horizontales
     document.getElementById('action-area').innerHTML = `
-        <div class="btn-group" style="flex-direction: column; gap: 10px;">
-            <button onclick="iniciarTriviaInteractiva()" style="background:#2e7d32; width:100%;">🟢 ${enc.opcionA}</button>
-            <button onclick="mostrarFinalTriste(0)" style="background:#c62828; width:100%;">🔴 ${enc.opcionB}</button>
+        <div class="btn-group" style="flex-direction: row; gap: 10px;">
+            <button onclick="iniciarTriviaInteractiva()" style="background:#2e7d32; flex: 1;">🟢 ${enc.opcionA}</button>
+            <button onclick="mostrarFinalTriste(0)" style="background:#c62828; flex: 1;">🔴 ${enc.opcionB}</button>
         </div>
     `;
     document.getElementById('section-name').innerText = "Encrucijada";
@@ -400,6 +396,7 @@ function mostrarPantallaEncrucijadaHistoria() {
 function iniciarTriviaInteractiva() {
     triviaIdx = 0;
     puntaje = 0;
+    
     if (audioNarracion) {
         audioNarracion.pause();
         audioNarracion.currentTime = 0;
@@ -415,7 +412,6 @@ function cargarSiguientePreguntaTrivia() {
 
     if (triviaIdx < triviaList.length) {
         let q = triviaList[triviaIdx];
-        
         let encImage = histData.encrucijada.image;
         
         document.getElementById('visual-frame').innerHTML = `<img src="${encImage}" alt="Desafío de Guardián" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
@@ -427,8 +423,8 @@ function cargarSiguientePreguntaTrivia() {
 
         document.getElementById('story-content').innerHTML = `
             <div class="highlight-text-box">
-                <p style="font-size: 1.05rem; margin-bottom: 15px; color: #1b5e20; font-weight: bold;">${q.pregunta}</p>
-                <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
+                <p style="font-size: 0.95rem; margin-bottom: 8px; color: #1b5e20; font-weight: bold; text-align: center;">${q.pregunta}</p>
+                <div style="width: 100%; display: flex; flex-direction: row; gap: 8px; justify-content: center;">
                     ${opcionesHtml}
                 </div>
             </div>
@@ -441,7 +437,6 @@ function cargarSiguientePreguntaTrivia() {
         else mostrarFinalTriste(0);
     }
 }
-
 function responderTrivia(seleccionada, correcta) {
     const botones = document.querySelectorAll('.trivia-btn');
     botones.forEach(b => b.disabled = true);
@@ -472,7 +467,7 @@ function mostrarFinalFeliz(idx) {
         let item = felizArr[idx];
         document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="Final Feliz" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
         document.getElementById('story-content').innerHTML = `
-            <div class="highlight-text-box" style="border-color:#81c784; background:#f1f8e9;">
+            <div class="highlight-text-box" style="border-color:#81c784; background: rgba(241, 248, 233, 0.95);">
                 <p style="color:#2e7d32;">${item.text}</p>
             </div>
         `;
@@ -497,7 +492,7 @@ function mostrarFinalTriste(idx) {
         let item = tristeArr[idx];
         document.getElementById('visual-frame').innerHTML = `<img src="${item.image}" alt="Final Triste" onerror="this.parentElement.innerHTML='[Imagen no encontrada]' ">`;
         document.getElementById('story-content').innerHTML = `
-            <div class="highlight-text-box" style="border-color:#e57373; background:#ffebee;">
+            <div class="highlight-text-box" style="border-color:#e57373; background: rgba(255, 235, 238, 0.95);">
                 <p style="color:#c62828;">${item.text}</p>
             </div>
         `;
